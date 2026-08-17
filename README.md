@@ -244,7 +244,7 @@ which represented the internet in the simulation.
 
 ---
 
-## Step 1 — Confirm the Problem
+## Step 1 Confirm the Problem
 
 I tested connectivity from Laptop Zero:
 
@@ -258,7 +258,7 @@ This confirmed that the reported problem was real.
 
 ---
 
-## Step 2 — Determine the Scope
+## Step 2 Determine the Scope
 
 I tested another computer:
 
@@ -279,7 +279,7 @@ This prevented me from wasting time troubleshooting infrastructure that was alre
 
 ---
 
-## Step 3 — Layer 1 Investigation
+## Step 3 Layer 1 Investigation
 
 I checked the switch interface:
 
@@ -305,7 +305,7 @@ Layer 1 was therefore working correctly.
 
 ---
 
-## Step 4 — Layer 2 Investigation
+## Step 4  Layer 2 Investigation
 
 I checked the switch's MAC address table:
 
@@ -411,9 +411,7 @@ The switch was working.
 
 The actual problem was simply that the laptop had the wrong IP configuration.
 
----
-
-# Lab 2 — The Entire Office Lost the Internet
+# Lab 2 The Entire Office Lost the Internet
 
 ## Scenario
 
@@ -923,7 +921,7 @@ The network used:
 
 ---
 
-## Step 1 — Test the Server Gateway
+## Step 1  Test the Server Gateway
 
 From the App Server:
 
@@ -937,7 +935,7 @@ This showed that the server could communicate with its router sub-interface.
 
 ---
 
-## Step 2 — Test the Internet
+## Step 2  Test the Internet
 
 ```text
 ping 1.1.1.2
@@ -951,7 +949,7 @@ Therefore, the problem was isolated to VLAN 2.
 
 ---
 
-## Step 3 — Check VLAN and Trunk Configuration
+## Step 3  Check VLAN and Trunk Configuration
 
 I confirmed that:
 
@@ -961,7 +959,7 @@ I confirmed that:
 
 ---
 
-## Step 4 — Check Router Interfaces
+## Step 4 Check Router Interfaces
 
 I ran:
 
@@ -973,7 +971,7 @@ The router sub-interfaces were up and had the correct IP addresses.
 
 ---
 
-## Step 5 — Check Routing
+## Step 5 Check Routing
 
 I ran:
 
@@ -989,7 +987,7 @@ This shifted the investigation toward NAT.
 
 ---
 
-## Step 6 — Check NAT
+## Step 6 Check NAT
 
 I ran:
 
@@ -1561,7 +1559,7 @@ The CE router was:
 
 ---
 
-## Step 1 — Confirm Network Connectivity
+## Step 1 Confirm Network Connectivity
 
 From Tony's computer:
 
@@ -1575,7 +1573,7 @@ This confirmed that the network connection between Tony's PC and the router was 
 
 ---
 
-## Step 2 — Test SSH
+## Step 2 Test SSH
 
 Tony attempted:
 
@@ -1593,7 +1591,7 @@ The authentication failed.
 
 ---
 
-## Step 3 — Test Another User
+## Step 3 Test Another User
 
 Another engineer, Alice, attempted to log in:
 
@@ -1615,7 +1613,7 @@ It showed that:
 
 ---
 
-## Step 4 — Check Router AAA Configuration
+## Step 4 Check Router AAA Configuration
 
 I checked:
 
@@ -1631,7 +1629,7 @@ This provided fallback access if the TACACS+ server became unavailable.
 
 ---
 
-## Step 5 — Investigate the Authentication Server
+## Step 5 Investigate the Authentication Server
 
 I logged into the TACACS+ server and checked the user accounts.
 
